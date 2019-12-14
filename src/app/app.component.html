@@ -1,0 +1,25 @@
+<div class="container-fluid search-box">
+  <nav class="navbar navbar-expand-sm navbar-dark text-light top_header">
+    <h4>
+      <i class="material-icons icon">library_books</i> Mentor On Demand
+    </h4>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movie_collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="movie_collapse">
+      <ul class="navbar-nav  ml-auto">
+        <a class="nav-link text-light" routerLink="mentorSignup/">Register as Mentor</a>
+        <a class="nav-link text-light" routerLink="traineeSignup/">Register as Trainee</a>
+        <a class="nav-link text-light" *ngIf="this.authService.isTrainee" routerLink="training/">Enrollment</a>
+        <a class="nav-link text-light" routerLink="login/">Login</a>
+        <a class="nav-link text-light" routerLink="login/" *ngIf="loggedIn()"
+          (click)="this.authService.logout()">Logout</a>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
+  <nav class="navbar navbar-expand-sm navbar-dark text-light bottom">
+    <h4>Knowledge is Power</h4>
+  </nav>
+</div>

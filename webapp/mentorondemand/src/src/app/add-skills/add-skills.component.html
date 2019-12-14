@@ -1,0 +1,30 @@
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="mx-auto col-sm-6 mt-5 ml-5 mr-5">
+            <div class="row" *ngFor="let sk of skill">
+                SkillName = {{sk.skillName}}
+                Table Of Contents = {{sk.tableOfContents}}
+                Prerequites = {{sk.prerequites}}
+                Duration = {{sk.duration}}
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="card-group ml-5 my-5">
+    <div class="" *ngFor="let sk of technologies">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <h4 class="card-title">{{sk.skillName}}</h4>
+            </div>
+            <div class=" mr-3">{{sk.tableOfContents}}</div>
+            {{sk.prerequisites}}
+          </div>
+          <div class="mr-3">
+              {{sk.duration}}
+          </div>
+          <button type="button" class="btn btn-danger text-light" (click)="submit(sk.skillName)">Add Skill</button>
+        
+    </div>
+      </div>

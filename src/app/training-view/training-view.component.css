@@ -1,0 +1,14 @@
+.login_button{
+	background-color:#01A9DB;
+	color: white;
+}
+.imageview {
+	background-image:
+		url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+		background-position:center;
+		background-repeat:no-repeat;
+		background-size:cover;
+        position:relative;
+        height:1000px;
+
+}

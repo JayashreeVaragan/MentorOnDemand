@@ -1,0 +1,47 @@
+<div class="container-fluid mb-2 pb-2 mt-3 imageview">
+    <h2 class="text-white">Skill Details</h2>
+    <form class="needs-validation" [formGroup]="editForm">
+        <div class="form-row">
+            <div class="form-group col-md-3 mb-3 text-white">
+                <label for="rating">Rating</label>
+                <input type="text" class="form-control" id="rating" formControlName="rating"
+                    placeholder="Enter rating out of 5">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3 mb-3 text-white">
+                <label for="experience">YearsOfExperience</label>
+                <input type="text" class="form-control" id="experience" formControlName="experience"
+                    placeholder="Enter the Years Of Experience">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-3 text-white">
+                <label for="trainings">Trainingdelivered</label>
+                <input type="text" class="form-control" id="trainings" formControlName="trainings"
+                    placeholder="Enter the trainings delivered">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-3 text-white">
+                <label for="facilities">FacilitiesOffered</label>
+                <input type="text" class="form-control" id="facilities" formControlName="facilities"
+                    placeholder="Enter the Facilities provided">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-3">
+                <button type="submit" class="btn button-color text-light"
+                    (click)="submit(editForm.value)">Submit</button>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-3">
+                <button type="submit" class="btn button-color text-light" (click)="addskill(editForm.value)">Add
+                    Skill</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="row mb-3 search-bar">
+  <div class="col-sm-3" *ngFor="let sk of mentorList">
+    <div *ngIf="sk.mentorId.status=='A'">
+    <div class="card mx-auto mt-5 mb-5 mr-3">
+      <div class="card-body">
+        <b>Rating : </b>{{sk.rating}}<br>
+        <b>Skill Experience : </b>{{sk.experience}}<br>
+        <b>Trainings Delivered : </b>{{sk.trainings}}<br>
+        <b>Facilities Offered: </b>{{sk.facilities}}<br>
+        <b>Mentor Name: </b>{{sk.mentorId.userID}}<br>
+        <b>Mentor Contact :</b>{{sk.mentorId.contactNo}}<br>
+        <b>LinkedInUrl : </b>{{sk.mentorId.linkedInUrl}}<br>
+        <b>Email : </b>{{sk.mentorId.email}}<br>
+        <b>Years Of Experience : </b>{{sk.mentorId.yearsOfExperience}}
+      </div>
+      <div class="col-sm-3" *ngIf="this.authService.loggedIn">
+        <button type="button" class="btn login_button"
+          (click)="book(sk.mentorId.userID,this.authService.username,sk.skillId.skillName)">Book</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

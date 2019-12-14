@@ -1,0 +1,28 @@
+<div class="row imageview">
+    <div class="col-xl-11 mt-5 ml-5 mr-5 mx-5">
+        <h2 class="text-white"> User List </h2>
+
+        <table class="table">
+            <tr class="login_button">
+                <th class="ml-5">TRAINEE NAME </th>
+                <th class="ml-5">CONTACT</th>
+                <th class="ml-5">EMAIL</th>
+                <th class="ml-5">RESPONSE</th>
+            </tr>
+            <tr *ngFor="let user of mentor">
+                <td class="ml-5 text-white">{{user.mentorId.userID}}</td>
+                <td class="ml-5 text-white">{{user.mentorId.contactNo}}</td>
+                <td class="ml-5 text-white">{{user.mentorId.email}}</td>
+
+                <div *ngIf="user.proposalStatus=='APPROVED'">
+                    <td class="ml-5"><button type="submit" class="badge-success" (click)="pay()">PAY NOW</button>
+                    </td>
+                </div>
+                <div *ngIf="user.proposalStatus=='PENDING'">
+                    <td class="ml-5"><button type="submit" class="badge-danger">Approval Pending</button></td>
+                </div>
+            </tr>
+        </table>
+    </div>
+
+</div>
